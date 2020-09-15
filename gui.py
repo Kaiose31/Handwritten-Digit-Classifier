@@ -12,7 +12,7 @@ class Root(Tk):
     def __init__(self):
         self.path  = "test"
         super(Root, self).__init__()
-        self.title("Python Tkinter Dialog Widget")
+        self.title("HandWritten Digit Classifier")
         self.minsize(600 , 400)
         self.maxsize(600 , 400)
         self.resizable(0,0)
