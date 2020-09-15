@@ -5,6 +5,7 @@ from tensorflow import keras
 import cv2
 import numpy as np
 
+
 model = keras.models.load_model('num_model.h5')
 
 #formatting the input image to input to the model 
@@ -18,10 +19,10 @@ def classifier(path):
     
     prediction = model.predict(test) #Output from the model on the single image
     
-    print(np.argmax(prediction)) 
+    return (np.argmax(prediction)) 
 
 
 
 
-path = input("enter image path: ")
-classifier(path)    #input is path of the image. prints the predicted digit
+# path = input("enter image path: ")
+# classifier(path)    #input is path of the image. prints the predicted digit
