@@ -13,10 +13,10 @@ def classifier(path):
     test = cv2.imread(path,0)
     test=cv2.bitwise_not(test)
     test = cv2.resize(test,(28,28))
-    test = test/255.0
     test = np.array(test)
-    test = np.expand_dims(test,axis=0)
-    
+    test = test.astype("float32")/255
+    test = test.reshape(-1,28,28,1)
+    # test = np.expand_dims(test,axis=0)
     prediction = model.predict(test) #Output from the model on the single image
     
     return (np.argmax(prediction)) 
