@@ -6,7 +6,7 @@ import cv2
 import numpy as np
 
 
-model = keras.models.load_model('num_model.h5')
+model = keras.models.load_model('num_model.h5',compile=False)
 
 #formatting the input image to input to the model 
 def classifier(path):
